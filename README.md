@@ -13,6 +13,15 @@ To use the model on an image: (the zoom factor must be the same the one used to 
 
 `python run.py --zoom_factor 2 --model model_199.pth --image example.jpg --cuda`
 
+# For Michael
+
+don't do this unless you have to
+`docker build . -t srcnn`
+
+`docker run --gpus all -it -v $PWD:/data srcnn bash`
+
+`python scale.py -if 0 -lf 750 -ip /input_frames/dada/steps -sp /scaled_frames/dada -op /output/dada.mp4 -zf 2 -fps 10`
+
 # Example
 
 Original image:
